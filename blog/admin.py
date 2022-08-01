@@ -1,5 +1,5 @@
 from django.contrib import admin
-from blog.models import Post, Tag
+from blog.models import Post, Tag, Comment
 
 # Register your models here.
 
@@ -11,3 +11,4 @@ class PostAdmin(admin.ModelAdmin):
  # exclude = ["slug"] # Prevents us from editing these fields in the admin site
   list_display = ["slug", "published_at", ]
 
+admin.site.register(Comment)
